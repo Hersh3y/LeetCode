@@ -1,4 +1,8 @@
 def threeSum(nums: list[int]) -> list[list[int]]:
+    """
+    :type nums: List[int]
+    :rtype: List[List[int]]
+    """
     nums.sort()
     result = []
     for i in range(len(nums)):
