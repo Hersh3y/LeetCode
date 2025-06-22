@@ -4,38 +4,21 @@ def isValid(s: str) -> bool:
     1. Open brackets must be closed by the same type of brackets.
     2. Open brackets must be closed in the correct order.
     3. Every close bracket has a corresponding open bracket of the same type.
+    :type s: str
+    :rtype: int
     '''
-    if len(s) % 2 != 0:
-        return False
-    
     stack = []
-
+    hashmap = {'}':'{',')':'(',']':'['}
     for i in s:
-        if i == '(' or i == '[' or i =='{':
+        if i == '(' or i == '{' or i == '[':
             stack.append(i)
-        elif len(stack) == 0:
+        elif not stack:
             return False
-        elif i == ')':
-            if stack[-1] == '(':
-                stack.pop()
-            else:
-                return False
-        elif i == ']':
-            if stack[-1] == '[':
-                stack.pop()
-            else:
-                return False
-        elif i == '}':
-            if stack[-1] == '{':
-                stack.pop()
-            else:
-                return False
-    
-    if len(stack) == 0:
-        return True
-    else:
-        return False
-
+        elif hashmap[i] == stack[-1]:
+            stack.pop()
+        else:
+            return False
+    return not stack
 
 
 print(isValid("()"))   # Outputs True
