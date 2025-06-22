@@ -28,7 +28,7 @@ def threeSum(nums: list[int]) -> list[list[int]]:
 
 
 
-print(threeSum([-1,0,1,2,-1,-4]))
-print(threeSum([0,1,1]))
-print(threeSum([0,0,0]))
-print(threeSum([0,0,0,0]))
+print(threeSum([-1,0,1,2,-1,-4])) # Outputs [[-1, -1, 2], [-1, 0, 1]]
+print(threeSum([0,1,1])) # Outputs []
+print(threeSum([0,0,0])) # Outputs [[0, 0, 0]]
+print(threeSum([0,0,0,0])) # Outputs [[0, 0, 0]]
