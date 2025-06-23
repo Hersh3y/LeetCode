@@ -37,12 +37,12 @@ def minWindow(s, t):
     return min_str
 
 
-print(minWindow("ADOBECODEBANC", "ABC")) # Outputs BANC
-print(minWindow("a", "a")) # Outputs a
-print(minWindow("a", "aa")) # Outputs Empty String
-print(minWindow("OUZODYXAZV", "XYZ")) # Outputs YXAZ
-print(minWindow("xyz", "xyz")) # Outputs xyz
-print(minWindow("x", "xy")) # Outputs Empty String
-print(minWindow("aaabbbccc", "abc")) # Outputs aabbc
-print(minWindow("aaacbbaac", "abc")) # Outputs acb
-print(minWindow("aa", "aa")) # Outputs aa
+print(minWindow("ADOBECODEBANC", "ABC")) # Output: BANC
+print(minWindow("a", "a")) # Output: a
+print(minWindow("a", "aa")) # Output: Empty String
+print(minWindow("OUZODYXAZV", "XYZ")) # Output: YXAZ
+print(minWindow("xyz", "xyz")) # Output: xyz
+print(minWindow("x", "xy")) # Output: Empty String
+print(minWindow("aaabbbccc", "abc")) # Output: aabbc
+print(minWindow("aaacbbaac", "abc")) # Output: acb
+print(minWindow("aa", "aa")) # Output: aa
