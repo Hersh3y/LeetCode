@@ -4,7 +4,13 @@ def topKFrequent(nums, k):
     :type k: int
     :rtype: List[int]
     """
+    result = []
     hashmap = {}
+    for i in range(len(nums)):
+        if nums[i] not in hashmap:
+            hashmap[nums[i]] = 0
+        hashmap[nums[i]] += 1
+    
 
 
 print(topKFrequent([1,1,1,2,2,3], 2)) # Output: [1,2]
