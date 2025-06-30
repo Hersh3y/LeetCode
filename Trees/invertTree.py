@@ -10,4 +10,16 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: Optional[TreeNode]
         """
-        
+        if not root:
+            return None
+        queue = [root]
+        while queue:
+            node = queue.pop(0)
+            node_left = node.left
+            node.left = node.right
+            node.right = node_left
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        return root
