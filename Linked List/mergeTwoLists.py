@@ -10,25 +10,18 @@ class Solution(object):
         :type list2: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
-        if not list1 and not list2:
-            return None
-        head = ListNode()
-        current = head
-        while list1 or list2:
-            if not list2:
-                current.val = list1.val
-                list1 = list1.next
-            elif not list1:
-                current.val = list2.val
-                list2 = list2.next
-            elif list1.val <= list2.val:
-                current.val = list1.val
+        dummy = ListNode()
+        current = dummy
+        while list1 and list2:
+            if list1.val <= list2.val:
+                current.next = list1
                 list1 = list1.next
             else:
-                current.val = list2.val
+                current.next = list2
                 list2 = list2.next
-            if list1 or list2:
-                current.next = ListNode()
-                current = current.next
-        current = None
-        return head
+            current = current.next
+        if list1:
+            current.next = list1
+        else:
+            current.next = list2
+        return dummy.next
