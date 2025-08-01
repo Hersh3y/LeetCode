@@ -11,7 +11,7 @@ def maxSubArray(nums):
     return result
 
 
-print(maxSubArray([2,3,1,1,4])) # Output: 13
-print(maxSubArray([3,2,1,0,4])) # Output: 13
+print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) # Output: 6
+print(maxSubArray([5,4,-1,7,8])) # Output: 28
 print(maxSubArray([2,-3,4,-2,2,1,-1,4])) # Output: 9
 print(maxSubArray([-1])) # Output: -1
